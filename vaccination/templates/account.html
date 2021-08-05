@@ -1,0 +1,17 @@
+<html>
+  <header>
+  </header>
+  <body>
+        {% include "header.html" %}
+          <h1>My Account</h1>
+          <table>
+            {% if session["user"] is defined %}
+              <tr><td><b>Organization: </b></td><td><i>MedGrocer</i></td></tr>
+              <tr><td><b>Vaccine Brand: </b></td><td><i>Sinovac</i></td></tr>
+              <tr><td><b>First Dose Date: </b></td><td><i>July 15,2021</i></td></tr>
+              <tr><td><b>Second Dose Date: </b></td><td><i>August 15,2021</i></td></tr>
+            {% endif %}
+          </table>
+        {% include "footer.html" %}
+  </body>
+</html>
